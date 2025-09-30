@@ -14,12 +14,14 @@ struct TournamentListView: View {
     var body: some View {
         NavigationStack {
             List(viewModel.tournaments) { tournament in
-                VStack(alignment: .leading) {
-                    Text(tournament.name)
-                        .font(.headline)
-                    Text(tournament.game)
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                NavigationLink(destination: TournamentDetailView(tournament: tournament)) {
+                    VStack(alignment: .leading) {
+                        Text(tournament.name)
+                            .font(.headline)
+                        Text(tournament.game)
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                    }
                 }
             }
             .navigationTitle("Tournaments")
@@ -39,3 +41,4 @@ struct TournamentListView: View {
         }
     }
 }
+
