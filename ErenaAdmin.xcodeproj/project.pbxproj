@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F5527ECA2E8C1BD900B3626B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F5527EC92E8C1BD900B3626B /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		F5527EAA2E8C12B500B3626B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5527ECA2E8C1BD900B3626B /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = ErenaAdmin;
 			packageProductDependencies = (
+				F5527EC92E8C1BD900B3626B /* FirebaseFirestore */,
 			);
 			productName = ErenaAdmin;
 			productReference = F5527E9C2E8C12B300B3626B /* ErenaAdmin.app */;
@@ -195,6 +201,9 @@
 			);
 			mainGroup = F5527E932E8C12B300B3626B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F5527EC82E8C1BD900B3626B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F5527E9D2E8C12B300B3626B /* Products */;
 			projectDirPath = "";
@@ -578,6 +587,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F5527EC82E8C1BD900B3626B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F5527EC92E8C1BD900B3626B /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5527EC82E8C1BD900B3626B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F5527E942E8C12B300B3626B /* Project object */;
 }
