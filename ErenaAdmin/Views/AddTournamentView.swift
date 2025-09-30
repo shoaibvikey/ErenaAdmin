@@ -8,12 +8,14 @@
 import SwiftUI
 import FirebaseFirestore
 
-struct ContentView: View {
+struct AddTournamentView: View {
     @State private var tournamentName: String = ""
     @State private var gameName: String = ""
     @State private var startDate = Date()
 
     @State private var feedbackMessage = ""
+    
+    @Environment(\.dismiss) var dismiss
 
     var body: some View {
         NavigationStack {
@@ -35,6 +37,13 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Add New Tournament")
+            .toolbar {
+                            ToolbarItem(placement: .cancellationAction) {
+                                Button("Done") {
+                                    dismiss()
+                                }
+                            }
+                        }
         }
     }
 
@@ -62,6 +71,3 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
-}
